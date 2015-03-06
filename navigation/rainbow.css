@@ -117,6 +117,11 @@ padding-right:50px;
 color: #2b6d93;	
 } 
 
+.eventhour:hover {
+color: #2b6d93;	
+font-size: 14px;
+} 
+
 
 #indeximg {
 	margin-top: 20px;
