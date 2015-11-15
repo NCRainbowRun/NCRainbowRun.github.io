@@ -278,12 +278,19 @@ background-position: 0 -280px;
 
 
 .contenthead {
-font-size: 32px;
-line-height: 60px;
-font-family: Century Gothic, sans-serif;
-text-align:center;
+	font-size: 32px;
+	line-height: 60px;
+	font-family: Century Gothic, sans-serif;
+	text-align:center;
 }
- 
+
+.sponsorhead {
+	font-size: 18px;
+	line-height: 40px;
+	font-family: Century Gothic, sans-serif;
+	color: 	#ff0000;
+}
+
 
 .signhead {
 font-size: 26px;
