@@ -117,12 +117,6 @@ padding-right:50px;
 color: #2b6d93;	
 } 
 
-.eventhour  {
-color: #2b6d93;	
-font-size: 14pt;
-color: #610B0B;	
-} 
-
 
 #indeximg {
 	margin-top: 20px;
@@ -261,6 +255,26 @@ background-position: 0 -282px;
 }
 
 
+
+
+#sponsorimg {
+	margin-top: 20px;
+	margin-bottom: 20px;
+width: 700px;
+height: 280px;
+margin-left: auto; 
+margin-right: auto;	
+background: url('/images/sponsor.png');
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+	border: 10px solid #e1dee2;			
+}
+
+
+#sponsorimg:hover {
+background-position: 0 -280px;	
+}
 
 
 .contenthead {
