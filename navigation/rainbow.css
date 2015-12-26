@@ -43,7 +43,7 @@ list-style: none;
 }
 
 #navbar ul li a {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight:bold; 
 	display: block;
 	line-height: 50px;
@@ -60,8 +60,12 @@ list-style: none;
 }
 
 #navbar ul li a:hover {
-	color: #58198a;	
+	color: #58198a;
 	background: #fff;
+}
+
+.nowbar  {
+	background: #669999;
 }
 
 #content {
@@ -116,6 +120,44 @@ padding-right:50px;
 .hosen:hover {
 color: #2b6d93;	
 } 
+
+#fundraising {
+	  -webkit-transition: all 0.3s ease 0s;
+	  -moz-transition: all 0.3s ease 0s;
+	  -o-transition: all 0.3s ease 0s;
+  }
+
+#anchor {
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	padding-left:40px;padding-right:40px;
+	padding-bottom:10px;}
+
+
+#crowdrise {
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	padding-left:40px;padding-right:40px;
+	padding-bottom:10px;}
+
+
+#due {
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	padding-left:40px;padding-right:40px;
+	padding-bottom:10px;}
+
+
+#send{
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	padding-left:40px;padding-right:40px;
+	padding-top:10px;
+	padding-bottom:10px;}
 
 
 #indeximg {
