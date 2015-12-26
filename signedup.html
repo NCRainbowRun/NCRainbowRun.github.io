@@ -16,13 +16,7 @@
 
 <body>
 <div id="header">
-		
-      
         <center><img src="/images/headerlogo.png" /></center>
-       
-  
-   
- 
 </div>
 <div id="navbar">
     <ul>
@@ -202,9 +196,9 @@
                         size = document.createElement('select'),
                         age = document.createElement('select'),
                         firstNameText = document.createTextNode("First Name: "),
-                        lastNameText = document.createTextNode("Last Name: "),
-                        sizeText = document.createTextNode("Size: "),
-                        ageText = document.createTextNode("Age: "),
+                        lastNameText = document.createTextNode(" Last Name: "),
+                        sizeText = document.createTextNode(" Size: "),
+                        ageText = document.createTextNode(" Age: "),
                         breaker = document.createElement('br');
 
                 for (var i = 0; i < sizeClass.length; i++) {
@@ -225,9 +219,11 @@
                 firstName.setAttribute("name", "firstName");
                 firstName.setAttribute("class", "first_name add_ticket");
                 firstName.setAttribute("type", "text");
+                firstName.setAttribute("required", true);
                 lastName.setAttribute("name", "lastName");
                 lastName.setAttribute("class", "last_name add_ticket");
                 lastName.setAttribute("type", "text");
+                lastName.setAttribute("required", true)
                 size.setAttribute("name", "size");
                 size.setAttribute("class", "size add_ticket");
                 age.setAttribute("name", "age");
@@ -274,11 +270,11 @@
             var
                     crowdriseText = document.createTextNode("Crowd Rise ID: "),
                     crowdriseId = document.createElement("input"),
-                    firstNameText = document.createTextNode("First Name: "),
+                    firstNameText = document.createTextNode(" First Name: "),
                     firstName = document.createElement("input"),
-                    lastNameText = document.createTextNode("Last Name: "),
+                    lastNameText = document.createTextNode(" Last Name: "),
                     lastName = document.createElement("input"),
-                    teamText = document.createTextNode("Are you competing with a team?"),
+                    teamText = document.createTextNode("Are you competing with a team? "),
                     team = document.createElement("select"),
                     yes = document.createElement("option"),
                     no = document.createElement("option"),
@@ -289,12 +285,15 @@
             crowdriseId.setAttribute("name", "crowdriseId");
             crowdriseId.setAttribute("class", "crowdrise crowdrise_id");
             crowdriseId.setAttribute("type", "text");
+            crowdriseId.setAttribute("required", true);
             firstName.setAttribute("name", "crowdriseFirstName");
             firstName.setAttribute("class", "crowdrise first_name");
             firstName.setAttribute("type", "text");
+            firstName.setAttribute("required", true);
             lastName.setAttribute("name", "crowdriseLastName");
             lastName.setAttribute("class", "crowdrise, last_name");
             lastName.setAttribute("type", "text");
+            lastName.setAttribute("required", true);
             team.setAttribute("id", "team");
             teamAnchor.setAttribute("id", "team_anchor");
 
@@ -324,14 +323,14 @@
                 else {
 
                     var
-                            membersText = document.createTextNode("How many additional group members?"),
+                            membersText = document.createTextNode("How many additional group members? "),
                             members = document.createElement("select"),
                             group = document.createElement("div"),
                             groupPopulate = function(){
                                 var
-                                        firstNameText = document.createTextNode("First Name:"),
+                                        firstNameText = document.createTextNode("First Name: "),
                                         firstName = document.createElement("input"),
-                                        lastNameText = document.createTextNode("Last Name: "),
+                                        lastNameText = document.createTextNode(" Last Name: "),
                                         lastName = document.createElement("input"),
                                         breaker = document.createElement("br");
 
@@ -339,9 +338,11 @@
                                 firstName.setAttribute("name", "crowdriseFirstName");
                                 firstName.setAttribute("class", "crowdrise group first_name");
                                 firstName.setAttribute("type", "text");
+                                firstName.setAttribute("required", true);
                                 lastName.setAttribute("name", "crowdriseLastName");
                                 lastName.setAttribute("class", "crowdrise group last_name");
                                 lastName.setAttribute("type", "text");
+                                lastName.setAttribute("required", true);
                                 group.appendChild(firstNameText);
                                 group.appendChild(firstName);
                                 group.appendChild(lastNameText);
@@ -374,9 +375,7 @@
                     });
                 }
             })
-
         }
-
     })
 
 
