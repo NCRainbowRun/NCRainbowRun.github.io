@@ -170,15 +170,13 @@
                 <div id="due" class="form_script">
                 </div>
 
-                <div id="send" class="form_script">
-                </div>
-
-
             </div>
 
 
         </form>
         <!--end Form-->
+        <div id="send" class="form_script">
+        </div>
 
     </div>
 
@@ -280,11 +278,11 @@
                 firstName.setAttribute("name", "firstName");
                 firstName.setAttribute("class", "first_name add_ticket");
                 firstName.setAttribute("type", "text");
-                firstName.required = true;
+
                 lastName.setAttribute("name", "lastName");
                 lastName.setAttribute("class", "last_name add_ticket");
                 lastName.setAttribute("type", "text");
-                lastName.required = true;
+
                 size.setAttribute("name", "size");
                 size.setAttribute("class", "size add_ticket");
                 age.setAttribute("name", "age");
@@ -347,15 +345,15 @@
             crowdriseId.setAttribute("name", "crowdriseId");
             crowdriseId.setAttribute("class", "crowdrise crowdrise_id");
             crowdriseId.setAttribute("type", "text");
-            crowdriseId.required = true;
+
             firstName.setAttribute("name", "crowdriseFirstName");
             firstName.setAttribute("class", "crowdrise first_name");
             firstName.setAttribute("type", "text");
-            firstName.required = true;
+
             lastName.setAttribute("name", "crowdriseLastName");
             lastName.setAttribute("class", "crowdrise, last_name");
             lastName.setAttribute("type", "text");
-            lastName.required = true;
+
             team.setAttribute("id", "team");
             teamAnchor.setAttribute("id", "team_anchor");
 
@@ -400,11 +398,11 @@
                                 firstName.setAttribute("name", "crowdriseFirstName");
                                 firstName.setAttribute("class", "crowdrise group first_name");
                                 firstName.setAttribute("type", "text");
-                                firstName.required = true;
+
                                 lastName.setAttribute("name", "crowdriseLastName");
                                 lastName.setAttribute("class", "crowdrise group last_name");
                                 lastName.setAttribute("type", "text");
-                                lastName.required = true;
+
                                 group.appendChild(firstNameText);
                                 group.appendChild(firstName);
                                 group.appendChild(lastNameText);
@@ -425,7 +423,6 @@
                     teamAnchor.appendChild(membersText);
                     teamAnchor.appendChild(members);
                     teamAnchor.appendChild(group);
-                    groupPopulate();
                     groupPopulate();
 
                     members.addEventListener("change", function (e) {
@@ -458,7 +455,7 @@
         //check if there is any unfilled field
         var
                 inputs = document.querySelectorAll("#fundraising input[type=text]"),
-                inputsLength =inputs.length,
+                inputsLength = inputs.length,
                 empties = [];
 
         for (var i = 0; i < inputsLength; i++) {
@@ -482,10 +479,18 @@
             firstEmpty.focus();
         }
 
+        //check at least one registration method is done
+        else if (ticket_numbers.selectedIndex == 0 && competition.selectedIndex == 0) {
+            ticket_numbers.focus();
+        }
 
         //do paypal payment stuff if necessary
+        else
+        {
 
-        //fundraising.submit();
+
+            //fundraising.submit();
+        }
     });
 
 </script>
