@@ -81,8 +81,8 @@
         <!-- FORM: Move the following form element to a place that you would like to see -->
         <form action="http://formspree.io/ncrainbowruntech@gmail.com" id="fundraising" name="fundraising" method="post">
             <div>
-                <div class = "form_script">
-                    Your email: <input type = "text" id="email" name="email" autocomplete="off">
+                <div class="form_script">
+                    Your email: <input type="text" id="email" name="email" autocomplete="off">
                 </div>
 
                 <div class="hosen plr20">
@@ -271,7 +271,9 @@
                         lastNameText = document.createTextNode(" Last Name: "),
                         sizeText = document.createTextNode(" Size: "),
                         ageText = document.createTextNode(" Age: "),
-                        breaker = document.createElement('br');
+                        breaker1 = document.createElement('br'),
+                        breaker2 = document.createElement('br'),
+                        breaker3 = document.createElement('br');
 
                 for (var i = 0; i < sizeClass.length; i++) {
                     var option = document.createElement("option");
@@ -308,11 +310,14 @@
                 anchor.appendChild(firstName);
                 anchor.appendChild(lastNameText);
                 anchor.appendChild(lastName);
+
+                anchor.appendChild(breaker1);
                 anchor.appendChild(sizeText);
                 anchor.appendChild(size);
                 anchor.appendChild(ageText);
                 anchor.appendChild(age);
-                anchor.appendChild(breaker);
+                anchor.appendChild(breaker2);
+                anchor.appendChild(breaker3);
             };
 
     calculate();
@@ -352,7 +357,9 @@
                     yes = document.createElement("option"),
                     no = document.createElement("option"),
                     teamAnchor = document.createElement("div"),
-                    breaker = document.createElement("br");
+                    breaker1 = document.createElement('br'),
+                    breaker2 = document.createElement('br'),
+                    breaker3 = document.createElement('br');
 
 
             crowdriseId.setAttribute("name", "crowdriseId");
@@ -379,11 +386,13 @@
 
             crowdrise.appendChild(crowdriseText);
             crowdrise.appendChild(crowdriseId);
+            crowdrise.appendChild(breaker1);
             crowdrise.appendChild(firstNameText);
             crowdrise.appendChild(firstName);
             crowdrise.appendChild(lastNameText);
             crowdrise.appendChild(lastName);
-            crowdrise.appendChild(breaker);
+            crowdrise.appendChild(breaker2);
+            crowdrise.appendChild(breaker3);
 
             crowdrise.appendChild(teamText);
             crowdrise.appendChild(team);
@@ -503,18 +512,17 @@
 
 
         //do paypal payment stuff if necessary
-        else
-        {
+        else {
             //submit via jquery
             $.ajax({
                 url: 'http://formspree.io/ncrainbowruntech@gmail.com',
                 method: 'POST',
                 data: $("#fundraising").serialize(),
                 dataType: 'json',
-                beforeSend: function() {
+                beforeSend: function () {
                     $("#fundraising").append('<div class="alert alert--loading">Sending message…</div>');
                 },
-                success: function(data) {
+                success: function (data) {
                     $("#fundraising").find('.alert--loading').hide();
 
                     var paypalForm = $(document).find('.paypal-button');
@@ -528,7 +536,7 @@
                         $("#fundraising").append('<div class="alert alert--success">Registration Successful</div>');
                     }
                 },
-                error: function(err) {
+                error: function (err) {
                     $("#fundraising").find('.alert--loading').hide();
                     $("#fundraising").append('<div class="alert alert--error">Oops, there was an error. Please contact us.</div>');
                 }
