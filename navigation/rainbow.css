@@ -19,7 +19,12 @@ padding-bottom: 3px;
 background: #fff;
 text-align: center;	
 border-top: 8px solid #cbeef3;
-}  
+}
+
+.imgwrapper {
+	max-width: 620px;
+	padding: 0 20px 40px 20px;
+	margin: auto;}
 
 #navbar {
 width: 100%;
@@ -60,8 +65,12 @@ list-style: none;
 }
 
 #navbar ul li a:hover {
-	color: #58198a;	
+	color: #58198a;
 	background: #fff;
+}
+
+.nowbar  {
+	background: #669999;
 }
 
 #content {
@@ -116,6 +125,44 @@ padding-right:50px;
 .hosen:hover {
 color: #2b6d93;	
 } 
+
+#fundraising {
+	  -webkit-transition: all 0.3s ease 0s;
+	  -moz-transition: all 0.3s ease 0s;
+	  -o-transition: all 0.3s ease 0s;
+  }
+
+#anchor {
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	padding-left:40px;padding-right:40px;
+	padding-bottom:10px;}
+
+
+#crowdrise {
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	padding-left:40px;padding-right:40px;
+	padding-bottom:10px;}
+
+
+#due {
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	padding-left:40px;padding-right:40px;
+	padding-bottom:10px;}
+
+
+#send{
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	padding-left:40px;padding-right:40px;
+	padding-top:10px;
+	padding-bottom:10px;}
 
 
 #indeximg {
@@ -303,6 +350,43 @@ text-align:center;
 color: 	#2b6d93;
 }
 .bluehighlightB { color: #2b6d93; font-weight: bold;}
+
+
+
+.carousel-wrapper {
+	margin: 20px auto;
+	position: relative;
+	border: 10px solid #fff;
+	width: 600px;
+	height: 400px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 0 2px #999;
+	-moz-box-shadow: 0 0 2px #999;
+	box-shadow: 0 0 2px #999;
+}
+
+
+/** Carousel **/
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel ul {
+	width: 20000em;
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.carousel li {
+	float: left;
+}
+
 
 
 
