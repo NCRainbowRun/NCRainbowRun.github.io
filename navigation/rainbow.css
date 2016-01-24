@@ -139,6 +139,15 @@ body {
     padding-bottom: 10px;
 }
 
+.form_script_double {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    padding-left: 80px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+
 .invisible {
     display: none;
 }

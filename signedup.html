@@ -105,7 +105,7 @@
                     </ol>
                 </div>
 
-                <div id="anchor">
+                <div id="anchor" class="form_script_double">
                 </div>
 
 
@@ -133,7 +133,7 @@
                     </ol>
                 </div>
 
-                <div id="crowdrise">
+                <div id="crowdrise" class="form_script_double">
 
                 </div>
 
@@ -321,7 +321,7 @@
             };
 
     calculate();
-    anchor.setAttribute("class", "add_ticket form_script");
+    //anchor.setAttribute("class", "add_ticket form_script_double");
 
     ticket_numbers.addEventListener("change", function () {
         anchor.innerHTML = "";
@@ -344,7 +344,7 @@
             crowdrise.innerHTML = "";
         }
         else {
-            crowdrise.setAttribute("class", "crowdrise form_script");
+            //crowdrise.setAttribute("class", "crowdrise form_script");
             var
                     crowdriseText = document.createTextNode("Crowd Rise ID: "),
                     crowdriseId = document.createElement("input"),
