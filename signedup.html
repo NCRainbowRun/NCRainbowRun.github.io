@@ -79,8 +79,12 @@
     <div class="signhead bluehighlight ptb20">Pre-registration Form:</div>
     <div>
         <!-- FORM: Move the following form element to a place that you would like to see -->
-        <form action="http://formspree.io/irene.hh.cho@gmail.com" id="fundraising" name="fundraising" method="post">
+        <form action="http://formspree.io/ncrainbowruntech@gmail.com" id="fundraising" name="fundraising" method="post">
             <div>
+                <div class = "form_script">
+                    Your email: <input type = "text" id="email" name="email" autocomplete="off">
+                </div>
+
                 <div class="hosen plr20">
                     <ol start="1">
                         <li>How many tickets will you be buying?&nbsp;&nbsp;&nbsp;
@@ -176,8 +180,8 @@
         </form>
         <!--end Form-->
         <div id="send" class="form_script">
-        </div>
 
+        </div>
     </div>
 
 
@@ -225,6 +229,7 @@
                     total = document.createElement("input");
                     totalText = document.createTextNode("Total Due: $");
                     total.setAttribute("type", "text");
+                    total.setAttribute("id", "total");
                     total.setAttribute("name", "total");
                     total.setAttribute("class", "total");
                     total.setAttribute("disabled", true);
@@ -232,9 +237,17 @@
                     due.appendChild(totalText);
                     due.appendChild(total);
 
-                    paypal = document.createElement("button");
-                    paypal.setAttribute("id", "paypal");
-                    paypal.innerHTML = 'Pay'; //put paypal url here
+                    paypal = document.createElement("script");
+                    paypal.setAttribute('id', 'paypal');
+                    paypal.setAttribute('async', 'async');
+                    paypal.setAttribute('src',
+                            'https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=elliotc@live.unc.edu');
+                    paypal.setAttribute('data-button', 'donate');
+                    paypal.setAttribute('data-name', 'NC Rainbow Run');
+                    paypal.setAttribute('data-amount', shirtsTotal);
+                    paypal.setAttribute('data-shipping', 0);
+                    paypal.setAttribute('data-tax', 0);
+                    paypal.setAttribute('data-callback', 'http://www.ncrainbowrun.com');
 
                     send.appendChild(paypal);
                 }
@@ -423,6 +436,9 @@
                     teamAnchor.appendChild(membersText);
                     teamAnchor.appendChild(members);
                     teamAnchor.appendChild(group);
+
+                    //populate 2 person here for default
+                    groupPopulate();
                     groupPopulate();
 
                     members.addEventListener("change", function (e) {
@@ -484,12 +500,39 @@
             ticket_numbers.focus();
         }
 
+
+
         //do paypal payment stuff if necessary
         else
         {
+            //submit via jquery
+            $.ajax({
+                url: 'http://formspree.io/ncrainbowruntech@gmail.com',
+                method: 'POST',
+                data: $("#fundraising").serialize(),
+                dataType: 'json',
+                beforeSend: function() {
+                    $("#fundraising").append('<div class="alert alert--loading">Sending message…</div>');
+                },
+                success: function(data) {
+                    $("#fundraising").find('.alert--loading').hide();
 
+                    var paypalForm = $(document).find('.paypal-button');
 
-            //fundraising.submit();
+                    if (paypalForm && paypalForm.length > 0) {
+                        $("#fundraising").append('<div class="alert alert--success">Please wait while your registration is processing.</div>');
+                        paypalForm.submit();
+                    }
+
+                    else {
+                        $("#fundraising").append('<div class="alert alert--success">Registration Successful</div>');
+                    }
+                },
+                error: function(err) {
+                    $("#fundraising").find('.alert--loading').hide();
+                    $("#fundraising").append('<div class="alert alert--error">Oops, there was an error. Please contact us.</div>');
+                }
+            });
         }
     });
 
