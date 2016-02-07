@@ -211,11 +211,11 @@
             sizeClass = ["AS", "AM", "AL", "AXL", "AXXL", "AXXXL"],
             ageClass = ["Under 12", "Student", "Adult"],
             priceClass = [15, 25, 35],
+            send = document.getElementById('send'),
             calculate = function () {
                 var
                         ages = document.getElementsByName("age"),
                         due = document.getElementById("due"),
-                        send = document.getElementById("send"),
                         shirtsTotal = 0;
 
                 for (var l = 0; l < ages.length; l++) {
