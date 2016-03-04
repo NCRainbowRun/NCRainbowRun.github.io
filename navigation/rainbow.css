@@ -592,3 +592,8 @@ body {
     margin-right: auto;
     text-align: center;
 }
+
+.blue-center {
+    font-size: 20px;
+    text-align: center;
+}
