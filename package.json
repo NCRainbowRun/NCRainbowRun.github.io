@@ -1,0 +1,11 @@
+{
+  "name": "nc-rainbow-run",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "latest"
+  }
+}

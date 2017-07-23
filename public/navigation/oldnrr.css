@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* CSS Document */
+body 
+{
+	background-color:#c3e4e9;
+	background-image:url('/images/tempbg.jpg');
+	background-repeat:no-repeat;
+	background-position:top center;
+}
